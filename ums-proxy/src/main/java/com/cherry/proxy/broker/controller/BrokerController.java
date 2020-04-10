@@ -15,15 +15,11 @@ import java.util.List;
 public class BrokerController {
 
     @Autowired
-    private DiscoveryClient discoveryClient;
-
-    @Autowired
     public RestTemplate restTemplate;
 
     @GetMapping("/broker/list")
     public List<BrokerNode> getBrokerList(){
-        List<ServiceInstance> list = discoveryClient.getInstances("ums-mc");
-        return restTemplate.getForObject(list.get(0).getUri().toString()+"/broker/list",List.class);
+        return restTemplate.getForObject("http://ums-mc/broker/list",List.class);
     }
 
 
