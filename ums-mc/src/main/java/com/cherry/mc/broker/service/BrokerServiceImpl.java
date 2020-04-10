@@ -15,6 +15,6 @@ public class BrokerServiceImpl implements BrokerService {
 
     @Override
     public List<BrokerNode> getBrokerList() {
-        return brokerNodeDao.queryAll();
+        return brokerNodeDao.getBrokerList();
     }
 }
