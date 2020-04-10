@@ -17,4 +17,14 @@ public class BrokerServiceImpl implements BrokerService {
     public List<BrokerNode> getBrokerList() {
         return brokerNodeDao.getBrokerList();
     }
+
+    @Override
+    public BrokerNode getBrokerById(Long id) {
+        return brokerNodeDao.getBrokerById(id);
+    }
+
+    @Override
+    public boolean addBrokerNode(BrokerNode brokerNode) {
+        return brokerNodeDao.addBrokerNode(brokerNode);
+    }
 }

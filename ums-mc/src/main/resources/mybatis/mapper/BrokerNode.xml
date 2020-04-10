@@ -8,4 +8,13 @@
         select * from  broker_node;
     </select>
 
+    <select id="getBrokerById" resultType="BrokerNode" parameterType="Long">
+        select * from broker_node where brokerId = #{id}
+    </select>
+
+    <insert id="addBrokerNode" parameterType="BrokerNode">
+        insert into broker_node (broker_node,broker_node)
+             VALUES (#{brokerName},#{topic})
+    </insert>
+
 </mapper>

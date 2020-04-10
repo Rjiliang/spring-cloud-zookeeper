@@ -13,4 +13,8 @@ public interface BrokerNodeDao {
 
     List<BrokerNode> getBrokerList();
 
+    BrokerNode getBrokerById(Long id);
+
+    boolean addBrokerNode(BrokerNode brokerNode);
+
 }
