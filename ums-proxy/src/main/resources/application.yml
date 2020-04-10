@@ -2,20 +2,9 @@ server:
   port: 8001
 
 
-mybatis:
-  type-aliases-package: com.cherry.api.broker.pojo
-  mapper-locations: classpath:mybatis/mapper/*.xml
-  config-location: classpath:mybatis/mybatis-config.xml
-
 spring:
   application:
     name: ums-proxy
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ums?useUnicode=true&characterEncoding=utf-8
-    username: root
-    password: 123456
   cloud:
     zookeeper:
       connect-string: 127.0.0.1:2181
